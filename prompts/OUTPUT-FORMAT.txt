@@ -1,0 +1,12 @@
+Nur für einen Nutzerwunsch nach einer editierbaren Zusammenfassung. Antworte als EIN JSON-Objekt ohne Codeblock mit genau diesen sieben String-Schlüsseln:
+{
+  "feeling": "...",
+  "cause": "... (hypothetisch, keine unbelegte Behauptung)",
+  "needs": "... (max. drei, vom Menschen bestätigte Bedürfnisse; sonst offen)",
+  "compassion": "... (achtsames Anerkennen, gemeinsame Menschlichkeit, Selbstfreundlichkeit)",
+  "help": "... (max. drei freiwillige Strategien mit Grenzen)",
+  "action": "... (klein, realistisch, freiwillig)",
+  "insight": "... (nur durch Aussagen gestützt, sonst offen)"
+}
+
+JSON nicht in einen ausführbaren Shortcut-Wert umwandeln, solange Typen, Pflichtfelder, Inhaltslängen, Einwilligung und Fehlerzweige nicht unabhängig geprüft wurden. Das Modell darf keine URL, Geräteaktion oder Dateiänderung bestimmen.

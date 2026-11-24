@@ -1,0 +1,60 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://example.invalid/inner-compass/1/export.schema.json",
+ "title": "INNER COMPASS Local Export v1",
+ "description": "Validierung der dauerhaft exportierten lokalen Datensätze; keine medizinische Dokumentation.",
+ "type": "object", "required": ["app", "version", "entries"],
+ "properties": {
+  "app": {"const": "INNER COMPASS"},
+  "version": {"const": 1},
+  "exportedAt": {"type": "string", "format": "date-time"},
+  "settings": {"$ref":"#/$defs/settings"},
+  "entries": {"type":"array", "maxItems": 20000, "items":{"$ref":"#/$defs/entry"}}
+ },
+ "additionalProperties": false,
+ "$defs": {
+  "settings": {
+   "type":"object", "properties": {
+    "depth":{"enum":["micro","standard","deep","open"]},
+    "style":{"type":"string"},
+    "silent":{"type":"boolean"}, "lowEnergy":{"type":"boolean"}, "spoken":{"type":"boolean"},
+    "allowAi":{"type":"boolean"}, "rememberRatings":{"type":"boolean"},
+    "avoidBreath":{"type":"boolean"}, "avoidBody":{"type":"boolean"}, "avoidTouch":{"type":"boolean"},
+    "disliked":{"type":"array", "items":{"type":"string"}},
+    "ratings":{"type":"object","additionalProperties":{"type":"number","minimum":1,"maximum":5}}
+   },"additionalProperties":true
+  },
+  "entry": {
+   "type":"object", "required":["id","version","kind","createdAt","values"],
+   "properties":{
+    "id":{"type":"string","minLength":1,"maxLength":200},
+    "version":{"const":1},
+    "kind":{"enum":["reflection","journal"]},
+    "createdAt":{"type":"string","format":"date-time"},
+    "savedAt":{"type":"string","format":"date-time"},
+    "intent":{"type":"string"},
+    "mode":{"enum":["micro","standard","deep","open"]},
+    "style":{"type":"string"},
+    "template":{"type":"string"},
+    "summary":{"type":"object","properties":{
+      "feeling":{"type":"string"},"cause":{"type":"string"},"needs":{"type":"string"},
+      "compassion":{"type":"string"},"help":{"type":"string"},"action":{"type":"string"},"insight":{"type":"string"}
+     },"additionalProperties":false},
+    "values":{
+      "type":"object", "properties":{
+        "emotions":{"type":"array","items":{"type":"string"}},
+        "central":{"type":"string"},"intensity":{"type":["number","null"],"minimum":0,"maximum":10},
+        "needs":{"type":"array","items":{"type":"string"},"maxItems":3},
+        "goal":{"type":"string"},"energy":{"type":"string"},"capacity":{"type":"string"},"timeAvailable":{"type":"string"},"environment":{"type":"string"},
+        "contextTag":{"type":"string"},"context":{"type":"string"},"facts":{"type":"string"},"interpretation":{"type":"string"},
+        "thought":{"type":"string"},"body":{"type":"string"},"critic":{"type":"string"},"criticFear":{"type":"string"},"values":{"type":"string"},"relation":{"type":"string"},
+        "action":{"type":"string"},"kindness":{"type":"string"},"duration":{"type":"string"},"more":{"type":"string"},
+        "positive":{"type":"string"},"support":{"type":"string"},"contribution":{"type":"string"},
+        "chosenStrategy":{"type":"string"},"helpfulness":{"type":["number","null"],"minimum":1,"maximum":5},
+        "answers":{"type":"array","items":{"type":"string"}}
+      },"additionalProperties":true
+    }
+   }, "additionalProperties": true
+  }
+ }
+}

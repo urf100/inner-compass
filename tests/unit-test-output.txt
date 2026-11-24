@@ -1,0 +1,158 @@
+
+> inner-compass@1.0.0 test
+> node --test tests/engine.test.mjs
+
+TAP version 13
+# Subtest: content coverage: 150+ nuanced words, 100+ statements, 50+ distinct interventions, 15+ journals
+ok 1 - content coverage: 150+ nuanced words, 100+ statements, 50+ distinct interventions, 15+ journals
+  ---
+  duration_ms: 1.739016
+  type: 'test'
+  ...
+# Subtest: anxiety without an obvious cause stays explicitly uncertain
+ok 2 - anxiety without an obvious cause stays explicitly uncertain
+  ---
+  duration_ms: 2.327934
+  type: 'test'
+  ...
+# Subtest: shame after a mistake is not a global identity judgment
+ok 3 - shame after a mistake is not a global identity judgment
+  ---
+  duration_ms: 0.223687
+  type: 'test'
+  ...
+# Subtest: anger following a boundary violation favors boundary-aware skills
+ok 4 - anger following a boundary violation favors boundary-aware skills
+  ---
+  duration_ms: 0.167813
+  type: 'test'
+  ...
+# Subtest: loneliness offers voluntary social connection options
+ok 5 - loneliness offers voluntary social connection options
+  ---
+  duration_ms: 0.207724
+  type: 'test'
+  ...
+# Subtest: emotional numbness does not force body practices
+ok 6 - emotional numbness does not force body practices
+  ---
+  duration_ms: 0.214013
+  type: 'test'
+  ...
+# Subtest: overwhelm adapts to low capacity and de-emphasizes deep cognitive processing
+ok 7 - overwhelm adapts to low capacity and de-emphasizes deep cognitive processing
+  ---
+  duration_ms: 0.332963
+  type: 'test'
+  ...
+# Subtest: conflicting emotions retained and central feeling optional
+ok 8 - conflicting emotions retained and central feeling optional
+  ---
+  duration_ms: 0.287955
+  type: 'test'
+  ...
+# Subtest: joy and excitement permit enjoyment
+ok 9 - joy and excitement permit enjoyment
+  ---
+  duration_ms: 0.31091
+  type: 'test'
+  ...
+# Subtest: relationship reflection distinguishes observation and interpretation
+ok 10 - relationship reflection distinguishes observation and interpretation
+  ---
+  duration_ms: 0.493455
+  type: 'test'
+  ...
+# Subtest: inner critic flow asks about self criticism
+ok 11 - inner critic flow asks about self criticism
+  ---
+  duration_ms: 0.176036
+  type: 'test'
+  ...
+# Subtest: an exercise that worsens distress can be excluded from matches
+ok 12 - an exercise that worsens distress can be excluded from matches
+  ---
+  duration_ms: 0.146831
+  type: 'test'
+  ...
+# Subtest: refusing to store: an unsaved session is not a persistent entry
+ok 13 - refusing to store: an unsaved session is not a persistent entry
+  ---
+  duration_ms: 0.124799
+  type: 'test'
+  ...
+# Subtest: refusing AI defaults to off
+ok 14 - refusing AI defaults to off
+  ---
+  duration_ms: 0.061293
+  type: 'test'
+  ...
+# Subtest: invalid stored data/import cannot be accepted
+ok 15 - invalid stored data/import cannot be accepted
+  ---
+  duration_ms: 0.309898
+  type: 'test'
+  ...
+# Subtest: no internet connection: engine code contains no fetch requirement
+ok 16 - no internet connection: engine code contains no fetch requirement
+  ---
+  duration_ms: 0.925137
+  type: 'test'
+  ...
+# Subtest: mid-session cancellation does not create saved entries
+ok 17 - mid-session cancellation does not create saved entries
+  ---
+  duration_ms: 0.091949
+  type: 'test'
+  ...
+# Subtest: safety view is separate from a diagnostic summary
+ok 18 - safety view is separate from a diagnostic summary
+  ---
+  duration_ms: 0.113211
+  type: 'test'
+  ...
+# Subtest: max 3 strategies in matching
+ok 19 - max 3 strategies in matching
+  ---
+  duration_ms: 0.13905
+  type: 'test'
+  ...
+# Subtest: depth switching carries forward the completed answers
+ok 20 - depth switching carries forward the completed answers
+  ---
+  duration_ms: 0.098358
+  type: 'test'
+  ...
+# Subtest: open conversation has one question at a time and no fixed time deadline
+ok 21 - open conversation has one question at a time and no fixed time deadline
+  ---
+  duration_ms: 0.149195
+  type: 'test'
+  ...
+# Subtest: needs suggestions are tentative and can be zero
+ok 22 - needs suggestions are tentative and can be zero
+  ---
+  duration_ms: 0.547307
+  type: 'test'
+  ...
+# Subtest: patterns only use explicitly supplied records, no invented entries
+ok 23 - patterns only use explicitly supplied records, no invented entries
+  ---
+  duration_ms: 0.29852
+  type: 'test'
+  ...
+# Subtest: settings exclude breathing without any override
+ok 24 - settings exclude breathing without any override
+  ---
+  duration_ms: 0.438282
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 76.14533
