@@ -1,6 +1,6 @@
 import {EMOTION_GROUPS, COMPASSION, NEED_GROUPS, STRATEGIES, GOALS} from './data.js';
 export const VERSION = 1;
-export const DEFAULT_SETTINGS = Object.freeze({depth:'standard',style:'Bodenständig & realistisch',silent:true,lowEnergy:false,spoken:false,allowAi:false,disliked:[],ratings:{},rememberRatings:false,avoidBreath:false,avoidBody:false,avoidTouch:false,installedReminder:false});
+export const DEFAULT_SETTINGS = Object.freeze({depth:'standard',style:'Bodenständig & realistisch',silent:true,lowEnergy:false,spoken:false,allowAi:false,workerEndpoint:'',disliked:[],ratings:{},rememberRatings:false,avoidBreath:false,avoidBody:false,avoidTouch:false,installedReminder:false});
 export function createSession(intent='daily',mode='standard',style=DEFAULT_SETTINGS.style){
  return {id:createId(),kind:'reflection',version:VERSION,createdAt:new Date().toISOString(),intent,mode,style,done:[],skipped:[],values:{emotions:[],central:'',intensity:null,needs:[],energy:'',capacity:'',timeAvailable:'',environment:'',chosenStrategy:'',helpfulness:null,criticFear:'',goal:'',contextTag:'',context:'',facts:'',interpretation:'',thought:'',body:'',critic:'',values:'',relation:'',action:'',kindness:'',duration:'',more:'',positive:'',support:'',contribution:''}};
 }
