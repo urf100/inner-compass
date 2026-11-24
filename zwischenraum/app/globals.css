@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* Ruhige, warme Farbpalette. Alle Text-/Hintergrund-Kombinationen erfüllen
+   mindestens WCAG AA (Kontrast >= 4.5:1). */
+@theme {
+  --font-sans: "Atkinson Hyperlegible Next", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-sand-50: #fbf8f3;
+  --color-sand-100: #f5efe6;
+  --color-sand-200: #e9e0d2;
+  --color-sand-300: #d8cbb8;
+
+  --color-ink: #2b2724;
+  --color-ink-soft: #57504a;
+
+  --color-sage-50: #eef4f0;
+  --color-sage-100: #dde9e2;
+  --color-sage-500: #4f7d68;
+  --color-sage-600: #3d6a56;
+  --color-sage-700: #305646;
+
+  --color-clay-50: #fbeee9;
+  --color-clay-100: #f5dcd2;
+  --color-clay-600: #9c4430;
+  --color-clay-700: #82382a;
+  --color-clay-800: #6f2e20;
+
+  --color-sky-50: #eef3f8;
+  --color-sky-700: #2f5479;
+
+  --color-honey-50: #fdf5e3;
+  --color-honey-800: #6b4e12;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-sand-50 text-ink font-sans antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply text-ink;
+    line-height: 1.25;
+  }
+  /* Gut sichtbarer Tastaturfokus */
+  :focus-visible {
+    outline: 3px solid var(--color-sky-700);
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
+  ::selection {
+    background: var(--color-sage-100);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Wiederverwendbare Bausteine (als Tailwind-Utilities, damit Varianten wie hover: funktionieren) */
+@utility card {
+  @apply rounded-2xl bg-white p-5 shadow-sm ring-1 ring-sand-200;
+}
+
+@utility btn {
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-4 py-2 text-base font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+@utility btn-primary {
+  @apply btn bg-sage-600 text-white hover:bg-sage-700;
+}
+
+@utility btn-secondary {
+  @apply btn bg-white text-ink ring-1 ring-sand-300 hover:bg-sand-100;
+}
+
+@utility btn-quiet {
+  @apply btn bg-transparent text-sage-700 underline-offset-4 hover:bg-sage-50 hover:underline;
+}
+
+@utility btn-danger {
+  @apply btn bg-white text-clay-800 ring-1 ring-clay-100 hover:bg-clay-50;
+}
+
+@utility btn-sm {
+  @apply min-h-9 px-3 py-1.5 text-sm;
+}
+
+@utility label {
+  @apply mb-1.5 block font-semibold text-ink;
+}
+
+@utility hint {
+  @apply mt-1 text-sm text-ink-soft;
+}
+
+@utility input {
+  @apply block w-full rounded-xl border border-sand-300 bg-white px-3.5 py-2.5 text-base text-ink placeholder:text-ink-soft/70 focus:border-sage-600 focus:outline-none focus-visible:outline-3 focus-visible:outline-sky-700;
+}
+
+@utility link {
+  @apply font-semibold text-sage-700 underline decoration-sage-500/40 underline-offset-4 hover:decoration-sage-700;
+}
+
+@utility chip {
+  @apply inline-flex items-center rounded-full bg-sand-100 px-2.5 py-0.5 text-sm text-ink-soft;
+}
